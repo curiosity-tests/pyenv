@@ -3,11 +3,9 @@ name: No Response
 # Both `issue_comment` and `scheduled` event types are required for this Action
 # to work properly.
 on:
+  workflow_dispatch:
   issue_comment:
     types: [created]
-  schedule:
-    # Schedule for ten minutes after the hour, every 2 hours
-    - cron: '10 */2 * * *'
 
 permissions: {}
 jobs:
